@@ -1,0 +1,139 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+.header p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.task-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+.task-form input:focus {
+    border-color: #2563eb;
+}
+
+.task-form button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 13px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.task-form button:hover {
+    background: #1d4ed8;
+}
+
+.task-form button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+.status-message {
+    min-height: 22px;
+    margin: 10px 0 20px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.status-message.error {
+    color: #dc2626;
+}
+
+.status-message.success {
+    color: #16a34a;
+}
+
+.tasks-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.task-list {
+    list-style: none;
+}
+
+.task-item {
+    padding: 14px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.empty-message {
+    color: #94a3b8;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .task-form {
+        flex-direction: column;
+    }
+
+    .task-form button {
+        width: 100%;
+    }
+}
